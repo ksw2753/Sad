@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="signup d-flex">
+        <form autocomplete="off" id="add_form">
+            <h1>회원가입 </h1>
+            <div class=" form-group input-id">
+                <label for="user_id">아이디</label>
+                <div>
+                    <input type="text" name="user_id" id="user_id" placeholder="아이디를 입력해주세요.">
+                    <input type="button"  id="check_id" value="중복확인">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" name="name" id="name" class="nobtninput" placeholder="이름을 입력해주세요.">
+            </div>
+            <div class="form-group">
+                <label for="user_pw">비밀번호</label>
+                <input type="password" name="password" id="password" class="nobtninput" oninput="checkPassword()" required placeholder="비밀번호를 입력해주세요.">
+            </div>
+            <div class="form-group1">
+                <label for="user_pw">비밀번호 확인</label>
+                <input type="password" name="confirm_password" id="confirm_password" class="cfpw" oninput="checkPassword()" required placeholder="한번 더 확인해주세요.">
+                <span id="password_match_status"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일</label>
+                    <input type="text" name="email" id="email" class="nobtninput" placeholder="이메일을 입력해주세요.">
+            </div>
+            <div class="d-flex form-group">
+                <label for="phone">핸드폰</label>
+                <select name="통신사" id="phone">통신사
+                    <option value="SKT">SKT</option>
+                    <option value="SKT">KT</option>
+                    <option value="SKT">LG</option>
+                </select>
+                <p>-</p>
+                <input type="tel" name="phonenumber" id="phonenumbers" class="nobtninput"placeholder="전화번호를 입력해주세요.">
+            </div>
+            <input type="submit" value="가입하기">  
+        </form>
+    </div>
+    <script src="script/validatation.js"></script>
+</body>
+
+</html>
